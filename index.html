@@ -4,18 +4,7 @@
 
   <meta charset="UTF-8">
   <title>パスワード保護ページ</title>
-  <script>
-    const PASSWORD = "2311";
 
-    function checkAuth() {
-      const input = prompt("パスワードを入力してください：");
-      if (input !== PASSWORD) {
-        document.body.innerHTML = "<h1>アクセス拒否</h1>";
-      }
-    }
-
-    window.onload = checkAuth;
-  </script>
 </head>
 <body>
   <p style="font-size: 48px;">
