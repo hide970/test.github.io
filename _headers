@@ -1,3 +1,4 @@
 /*
-  Basic-Auth: user1 pass123
+  Basic-Auth: alice secret1
+  Basic-Auth: bob   secret2
   Status: 401
