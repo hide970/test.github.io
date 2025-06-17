@@ -1,10 +1,30 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <title>認証ページ</title>
+  <meta charset="UTF-8">
+  <title>限定アクセスページ</title>
 </head>
 <body>
-  <h1>🔐 認証済み！ようこそ</h1>
+  <div id="content" style="display: none;">
+    <h2>✅ 認証成功</h2>
+    <p>ここが限定コンテンツです！</p>
+  </div>
+
+  <div id="error" style="display: none;">
+    <h2>❌ アクセス拒否</h2>
+    <p>有効なキーがありません。</p>
+  </div>
+
+  <script>
+    const validKey = "dijfdihfsosphfpwfhwofhfwpieijf"; // 許可されたキー
+    const urlParams = new URLSearchParams(window.location.search);
+    const key = urlParams.get("key");
+
+    if (key === validKey) {
+      document.getElementById("content").style.display = "block";
+    } else {
+      document.getElementById("error").style.display = "block";
+    }
+  </script>
 </body>
 </html>
